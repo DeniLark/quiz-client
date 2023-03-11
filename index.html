@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Test, Quiz</title>
+</head>
+
+<body>
+  <div id="block-tests" class="block-tests">
+    <div class="tests container" id="tests">
+
+      <div class="card test">
+        <div class="card-body">
+          <a href="#" class="link-primary">This is some text within a card body.</a>
+          <div class="card-buttons">
+            <button class="btn btn-outline-primary card-small-btn" id="btn-card_edit">
+              <span class="material-symbols-sharp card-small-btn_icon">
+                edit
+              </span></button>
+            <button class="btn btn-outline-primary card-small-btn" id="btn-card_delete">
+              <span class="material-symbols-sharp card-small-btn_icon">
+                delete
+              </span>
+            </button>
+          </div>
+        </div>
+      </div><!-- card -->
+
+    </div> <!-- block-tests -->
+
+    <div class="footer bg-dark text-secondary text-center">
+      <button class="test add-test btn btn-primary px-5">Добавить</button>
+    </div>
+  </div>
+
+  <!-- Пройти тест -->
+  <div class="modal-container modal-test">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Заголовок теста</h3>
+        <button type="button" class="btn-close modal-btn_close" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-main">
+        <div class="test-question">${Test question}</div>
+        <div class="test-answers"></div>
+      </div>
+      <div class="modal-footer modal-footer_in-test">
+        <div class="block-info">
+          <span class="number-current">1</span>
+          /
+          <span class="number-total">20</span>
+          <span class="number-error-container">
+            (<span class="number-error">3</span>)
+          </span>
+        </div>
+        <!-- <button class="modal-btn btn-next-question">Дальше</button> -->
+      </div>
+    </div>
+  </div><!-- modal-test -->
+
+  <!-- Добавить тест -->
+  <div class="modal-container modal-add-test">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Создание теста</h3>
+        <button type="button" class="btn-close modal-btn_close" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-main">
+        <!-- <form action="" method="post"> -->
+        <input type="text" class="form-control" id="test-title" placeholder="Заголовок теста">
+        <div class="question">
+          <h5 class="question-title">Вопрос 1</h5>
+          <input type="text" class="question-text form-control" class="input-w100" value="2 + 2">
+          <div class="answers">
+            <div class="answer">
+              <input type="radio" class="form-check-input" name="a1" id="">
+              <input type="text" value="3" class="form-control">
+            </div>
+            <div class="answer">
+              <input type="radio" class="form-check-input" name="a1" checked id="">
+              <input type="text" value="4" class="form-control">
+            </div>
+            <div class="answer">
+              <input type="radio" class="form-check-input" name="a1" id="">
+              <input type="text" value="5" class="form-control">
+            </div>
+            <div class="answer">
+              <input type="radio" class="form-check-input" name="a1" id="">
+              <input type="text" value="6" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="new-questions"></div>
+        <button class="btn btn-primary px-4 btn-add-question" id="btn-add-question">Добавить вопрос</button>
+        <!-- </form> -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn btn btn-primary px-4" id="submit-test">Отправить тест</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Редактировать тест -->
+  <div class="modal-container modal-edit-test">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title"></h3>
+        <button type="button" class="btn-close modal-btn_close" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-main">
+        <!-- <form action="" method="post"> -->
+        <input type="text" class="form-control" id="test-title" placeholder="Новый заголовок теста">
+
+        <!-- <div class="question">
+          <h5 class="question-title">Вопрос 1</h5>
+          <input type="text" class="question-text form-control" class="input-w100" value="2 + 2">
+
+          <div class="answers">
+
+            <div class="answer">
+              <input type="radio" class="form-check-input" name="a1" id="">
+              <input type="text" value="3" class="form-control">
+            </div>
+
+            <div class="answer">
+              <input type="radio" class="form-check-input" name="a1" checked id="">
+              <input type="text" value="4" class="form-control">
+            </div>
+
+            <div class="answer">
+              <input type="radio" class="form-check-input" name="a1" id="">
+              <input type="text" value="5" class="form-control">
+            </div>
+
+            <div class="answer">
+              <input type="radio" class="form-check-input" name="a1" id="">
+              <input type="text" value="6" class="form-control">
+            </div>
+
+          </div>
+        </div> -->
+        <!-- question -->
+
+        <div class="new-questions"></div>
+
+        <button class="btn btn-primary px-4" id="btn-edit-question">Добавить вопрос</button>
+        <!-- </form> -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn btn btn-primary px-4" id="submit-test">Отправить тест</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./requests.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

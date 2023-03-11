@@ -1,0 +1,192 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.block-tests {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tests {
+  overflow: auto;
+  height: 90%;
+}
+
+.card {
+  margin: 10px 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+
+
+
+.modal-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.modal-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  width: 700px;
+  height: 90%;
+  background-color: white;
+  padding: 0 15px 10px 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.modal-main {
+  overflow: auto;
+  height: 90%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.new-questions {
+  margin-bottom: 10px;
+}
+
+.modal-footer_in-test {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number-error-container {
+  color: rgb(111, 14, 14);
+}
+
+.number-correct {
+  color: rgb(39, 108, 25);
+}
+
+.modal-test .modal-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-test .modal-header {
+  padding-left: 12px;
+}
+
+.test-question {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.question-title {
+  margin: 5px 0;
+}
+
+.test-finished {
+  text-align: center;
+}
+
+.test-answers {
+  height: 30%;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btn-answer {
+  background-color: white;
+  width: 45%;
+  margin: 5px;
+}
+
+.block-info_hidden {
+  display: none;
+}
+
+.answer {
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.answer input[type=text] {
+  width: 100%;
+  margin-left: 5px;
+}
+
+.question-text {
+  margin-bottom: 10px;
+}
+
+.form-check-input {
+  margin-top: 11px;
+  margin-left: 3px;
+}
+
+/*  */
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card-small-btn {
+  padding: 0px;
+}
+
+.card-small-btn:not(:first-child) {
+  margin-top: 3px;
+}
+
+.card-small-btn_icon {
+  width: 30px;
+  height: 30px;
+
+  margin-top: 5px;
+}
